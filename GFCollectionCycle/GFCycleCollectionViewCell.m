@@ -13,7 +13,6 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self.contentView addSubview:self.imageView];
-        self.imageView.frame = frame;
     }
     return self;
 }
@@ -21,7 +20,7 @@
 #pragma mark - setter and getter
 - (UIImageView *)imageView {
     if (_imageView == nil) {
-        _imageView = [[UIImageView alloc] init];
+        _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
     }
     return _imageView;
 }

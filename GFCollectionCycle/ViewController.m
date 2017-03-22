@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GFCycleView.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    GFCycleView *cycleView = [[GFCycleView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 100)];
+    [self.view addSubview:cycleView];
+    
 }
 
 
